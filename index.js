@@ -22,10 +22,6 @@ addButtonEl.addEventListener("click", function() {
     }
 })
 
-onChildAdded(shoppingListInDB, function(childSnapshot) {
-    // Display a notification when a new item is added
-    displayNotification("Ny sak att köpa: " + childSnapshot.val());
-});
 
 onValue(shoppingListInDB, function(snapshot) {
     if (snapshot.exists()) {
