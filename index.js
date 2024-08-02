@@ -37,7 +37,7 @@ onValue(shoppingListInDB, function(snapshot) {
             appendItemToShoppingListEl(currentItem)
         }    
     } else {
-        shoppingListEl.innerHTML = "Máme vše, co potřebujeme."
+        shoppingListEl.innerHTML = "Vi har allt vi behöver."
     }
 })
 
@@ -58,7 +58,7 @@ function appendItemToShoppingListEl(item) {
     newEl.textContent = itemValue
     
     newEl.addEventListener("click", function() {
-        if (confirm("Opravdu chceš tuto položku smazat?")) {
+        if (confirm("Är du säker att du vill ta bort denna?")) {
         let exactLocationOfItemInDB = ref(database, `shoppingList/${itemID}`)
         
         remove(exactLocationOfItemInDB)
